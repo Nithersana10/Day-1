@@ -1,0 +1,22 @@
+// Break on first prime number between 10 to 20
+for (let i = 10; i <= 20; i++) {
+  let isPrime = true;
+  for (let j = 2; j < i; j++) {
+    if (i % j === 0) {
+      isPrime = false;
+      break;
+    }
+  }
+  if (isPrime) {
+    console.log("First prime found:", i);
+    break; // exit loop on first prime
+  }
+}
+
+// Continue to print only odd numbers between 1 and 20
+for (let i = 1; i <= 20; i++) {
+  if (i % 2 === 0) {
+    continue; // skip even numbers
+  }
+  console.log(i);
+}
